@@ -17,4 +17,7 @@ RUN set -x \
 # log only config messages
 CMD ["/usr/sbin/init"]
 
+# systemd compatible stop sig
+STOPSIGNAL RTMIN+3
+
 VOLUME ["/etc/postfix", "/var/spool/postfix"]
